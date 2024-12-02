@@ -92,21 +92,29 @@ class Ball {
         }
         if (this.y + this.r >= canvas.height || this.y - this.r <= 0) {
             this.vector = [0, 0];
-            setTimeout(() => {
-                this.x = canvas.width / 2;
-                this.y = canvas.height / 2 - 50;
+            if (this.x > canvas.width / 2 - 150 + 1 - 400 && this.x < canvas.width / 2 + 150 + 1 - 400) {
+                window.location.href = document.querySelector("header a:nth-of-type(1)").getAttribute("href");
+            } else if (this.x > canvas.width / 2 - 150 + 1 && this.x < canvas.width / 2 + 150 + 1) {
+                window.location.href = document.querySelector("header a:nth-of-type(2)").getAttribute("href");
+            } else if (this.x > canvas.width / 2 - 150 + 1 + 400 && this.x < canvas.width / 2 + 150 + 1 + 400) {
+                window.location.href = document.querySelector("header a:nth-of-type(3)").getAttribute("href");
+            } else {
+                setTimeout(() => {
+                    this.x = canvas.width / 2;
+                    this.y = canvas.height / 2 - 50;
 
-                setTimeout(() => { // make it go
-                    this.vector[1] = 100;
-                }, 1000);
-            }, 500)
+                    setTimeout(() => { // make it go
+                        this.vector[1] = 100;
+                    }, 1000);
+                }, 500)
+            }
         }
 
         if (this.y + this.r >= paddle.y && this.x >= paddle.x && this.x <= paddle.x + paddle.w) {
             let relativeIntersect = -((paddle.x + (paddle.w / 2)) - this.x) / (paddle.w / 2);
             let bounceAngle = relativeIntersect * (Math.PI / 2);
             let speed = Math.sqrt(this.vector[0] ** 2 + this.vector[1] ** 2);
-            
+
             this.vector[0] = speed * Math.sin(bounceAngle);
             this.vector[1] = - (speed * Math.cos(bounceAngle));
             this.y = paddle.y - this.r;
