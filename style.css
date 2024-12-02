@@ -1,0 +1,39 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: "Retro";
+    src: url("./assets/Retro\ Gaming.ttf");
+}
+
+:root {
+    --cerna: rgb(27, 27, 27);
+}
+
+body {
+    background-color: var(--cerna);
+    color: white;
+    font-family: "Retro";
+}
+
+header {
+    margin-top: 20px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+}
+
+header a {
+    text-decoration: none;
+    color: var(--cerna);
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 45px;
+    width: 300px;
+}
