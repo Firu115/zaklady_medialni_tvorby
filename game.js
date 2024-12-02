@@ -93,11 +93,11 @@ class Ball {
         if (this.y + this.r >= canvas.height || this.y - this.r <= 0) {
             this.vector = [0, 0];
             if (this.x > canvas.width / 2 - 150 + 1 - 400 && this.x < canvas.width / 2 + 150 + 1 - 400) {
-                window.location.href = document.querySelector("header a:nth-of-type(1)").getAttribute("href");
+                window.location.replace(document.querySelector("header a:nth-of-type(1)").getAttribute("href"));
             } else if (this.x > canvas.width / 2 - 150 + 1 && this.x < canvas.width / 2 + 150 + 1) {
-                window.location.href = document.querySelector("header a:nth-of-type(2)").getAttribute("href");
+                window.location.replace(document.querySelector("header a:nth-of-type(2)").getAttribute("href"));
             } else if (this.x > canvas.width / 2 - 150 + 1 + 400 && this.x < canvas.width / 2 + 150 + 1 + 400) {
-                window.location.href = document.querySelector("header a:nth-of-type(3)").getAttribute("href");
+                window.location.replace(document.querySelector("header a:nth-of-type(3)").getAttribute("href"));
             } else {
                 setTimeout(() => {
                     this.x = canvas.width / 2;
