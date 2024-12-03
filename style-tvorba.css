@@ -1,0 +1,18 @@
+
+
+#image-cont{
+    display: flex;
+    margin: 30px;
+    align-items: center;
+}
+
+#image-cont img{
+    height: 600px;
+    width: auto;
+    margin: 0 30px;
+}
+
+.move-button{
+    font-size: 30px;
+    cursor: pointer;
+}
