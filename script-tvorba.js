@@ -24,10 +24,10 @@ const imgDisplay = document.querySelector('#img-zpracovani');
 let currentImage = 0;
 
 const allImages = [
-    "assets/images_presentation/image.png",
-    "assets/images_presentation/image-1.png",
-    "assets/images_presentation/image-2.png",
-    "assets/images_presentation/image-sound.png",
+    "assets/images/image.png",
+    "assets/images/image-1.png",
+    "assets/images/image-2.png",
+    "assets/images/image-sound.png",
 ]
 
 // Add event listener for keyboard arrows
@@ -39,6 +39,5 @@ document.addEventListener('keydown', (event) => {
     }
 });
 
-// rightButton.addEventListener('click', moveImageRight)
-// leftButton.addEventListener('click', moveImageLeft)
-
+rightButton.addEventListener('click', moveImageRight)
+leftButton.addEventListener('click', moveImageLeft)
