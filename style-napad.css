@@ -1,0 +1,15 @@
+.tvorba-videa{
+    width: 200px;
+    height: 50px;
+    text-decoration: none;
+    color: whitesmoke;
+    background-color: rgb(228, 2, 2);
+    text-align: center;
+    line-height: 45px;
+    border-radius: 10px;
+}
+
+
+.tvorba-videa:hover{
+    background-color: rgb(148, 22, 22);
+}

@@ -24,13 +24,22 @@ const rightButton = document.querySelector('#right-button');
 const imgDisplay = document.querySelector('#img-zpracovani');
 let currentImage = 0;
 
-const allImages = ["assets/images_presentation/colorwheels-md.jpg",
-    "assets/images_presentation/cut.jpg",
-    "assets/images_presentation/images.jpg",
-    "assets/images_presentation/syntex-blackmagic-design-davinci-resolve-17-main-04.jpg"
+const allImages = [
+    "assets/images_presentation/image.png",
+    "assets/images_presentation/image-1.png",
+    "assets/images_presentation/image-2.png",
+    "assets/images_presentation/image-sound.png",
 ]
 
+// Add event listener for keyboard arrows
+document.addEventListener('keydown', (event) => {
+    if (event.key === 'ArrowRight') {
+        moveImageRight();
+    } else if (event.key === 'ArrowLeft') {
+        moveImageLeft();
+    }
+});
 
-rightButton.addEventListener('click', moveImageRight)
-leftButton.addEventListener('click', moveImageLeft)
+// rightButton.addEventListener('click', moveImageRight)
+// leftButton.addEventListener('click', moveImageLeft)
 
