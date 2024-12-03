@@ -1,0 +1,50 @@
+.text-cont{
+    padding: 30px 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(44, 42, 42, 0.514);
+    border-radius: 20px;
+    /* border: 3px rgb(72, 131, 72) solid; */
+}
+
+#image-cont{
+    display: flex;
+    margin: 60px;
+    align-items: center;
+}
+
+#image-cont img{
+    height: 600px;
+    width: auto;
+    margin: 0 30px;
+}
+
+.move-button{
+    font-size: 30px;
+    cursor: pointer;
+}
+
+#img-zvuk{
+    height: 600px;
+    margin-top: 50px;
+}
+
+#menu-button{
+    width: 150px;
+    height: 50px;
+    text-decoration: none;
+    color: whitesmoke;
+    background-color: rgb(62, 116, 66);
+    text-align: center;
+    line-height: 45px;
+    border-radius: 10px;
+    margin-top: 50px;
+    font-size: 20px;
+}
+
+#menu-button:hover{
+    background-color: rgb(42, 88, 45);
+
+}

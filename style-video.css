@@ -1,0 +1,17 @@
+#napad-button{
+    width: 150px;
+    height: 50px;
+    text-decoration: none;
+    color: whitesmoke;
+    background-color: rgb(62, 116, 66);
+    text-align: center;
+    line-height: 45px;
+    border-radius: 10px;
+    margin-top: 50px;
+    font-size: 20px;
+}
+
+#napad-button:hover{
+    background-color: rgb(42, 88, 45);
+
+}
