@@ -18,19 +18,16 @@ function moveImageLeft() {
     console.log("here");
 }
 
-
 const leftButton = document.querySelector('#left-button');
 const rightButton = document.querySelector('#right-button');
 const imgDisplay = document.querySelector('#img-zpracovani');
 let currentImage = 0;
 
-const allImages = ["assets/images_presentation/colorwheels-md.jpg",
-    "assets/images_presentation/cut.jpg",
-    "assets/images_presentation/images.jpg",
-    "assets/images_presentation/syntex-blackmagic-design-davinci-resolve-17-main-04.jpg"
+const allImages = ["assets/images/colorwheels-md.jpg",
+    "assets/images/cut.jpg",
+    "assets/images/images.jpg",
+    "assets/images/syntex-blackmagic-design-davinci-resolve-17-main-04.jpg"
 ]
-
 
 rightButton.addEventListener('click', moveImageRight)
 leftButton.addEventListener('click', moveImageLeft)
-

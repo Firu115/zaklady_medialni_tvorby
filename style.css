@@ -47,17 +47,39 @@ main {
     line-height: 2em;
 }
 
-main>h1, main>h2, main>h3, main>h4, main>h5, main>h6 {
+main>h1,
+main>h2,
+main>h3,
+main>h4,
+main>h5,
+main>h6 {
     text-decoration: underline;
     margin-bottom: 1rem;
     margin-top: 1.4rem;
 }
 
-main li{
+main li {
     font-family: 'Roboto Mono', monospace;
     font-size: 1.2rem;
 }
 
 ul ul {
     margin-left: 30px;
+}
+
+#image-cont {
+    display: flex;
+    margin: 30px;
+    align-items: center;
+}
+
+#image-cont img {
+    height: 600px;
+    width: auto;
+    margin: 0 30px;
+}
+
+.move-button {
+    font-size: 30px;
+    cursor: pointer;
 }

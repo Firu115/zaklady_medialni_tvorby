@@ -15,7 +15,7 @@ class Paddle {
         this.x = canvas.width / 2 - this.w / 2;
         this.y = canvas.height - this.h;
         this.vector = 0;
-        this.maxSpeed = 10000;
+        this.maxSpeed = 400;
         this.acceleration = 10;
     }
 
@@ -93,18 +93,24 @@ class Ball {
         if (this.y + this.r >= canvas.height || this.y - this.r <= 0) {
             this.vector = [0, 0];
             if (this.x > canvas.width / 2 - 150 + 1 - 400 && this.x < canvas.width / 2 + 150 + 1 - 400) {
-                window.location.replace(document.querySelector("header a:nth-of-type(1)").getAttribute("href"));
+                document.querySelector("header a:nth-of-type(1)").click();
+                end = true;
+                return
             } else if (this.x > canvas.width / 2 - 150 + 1 && this.x < canvas.width / 2 + 150 + 1) {
-                window.location.replace(document.querySelector("header a:nth-of-type(2)").getAttribute("href"));
+                document.querySelector("header a:nth-of-type(2)").click();
+                end = true;
+                return
             } else if (this.x > canvas.width / 2 - 150 + 1 + 400 && this.x < canvas.width / 2 + 150 + 1 + 400) {
-                window.location.replace(document.querySelector("header a:nth-of-type(3)").getAttribute("href"));
+                document.querySelector("header a:nth-of-type(3)").click();
+                end = true;
+                return
             } else {
                 setTimeout(() => {
                     this.x = canvas.width / 2;
                     this.y = canvas.height / 2 - 50;
 
                     setTimeout(() => { // make it go
-                        this.vector[1] = 100;
+                        this.vector[1] = 130;
                     }, 1000);
                 }, 500)
             }
@@ -115,8 +121,8 @@ class Ball {
             let bounceAngle = relativeIntersect * (Math.PI / 2);
             let speed = Math.sqrt(this.vector[0] ** 2 + this.vector[1] ** 2);
 
-            this.vector[0] = speed * Math.sin(bounceAngle);
-            this.vector[1] = - (speed * Math.cos(bounceAngle));
+            this.vector[0] = 2 * speed * Math.sin(bounceAngle);
+            this.vector[1] = -2 * (speed * Math.cos(bounceAngle));
             this.y = paddle.y - this.r;
             paddleSound.play();
         }
@@ -126,6 +132,7 @@ class Ball {
 }
 
 let start = false;
+let end = false;
 let startTextVisible = true;
 
 let interval = setInterval(() => {
@@ -161,7 +168,7 @@ function startLoop() {
         window.requestAnimationFrame(gameLoop);
 
         setTimeout(() => { // make it go
-            ball.vector[1] = 100;
+            ball.vector[1] = 130;
         }, 1000)
         return;
     }
@@ -177,7 +184,7 @@ function gameLoop(timeStamp) {
     ball.move(dt);
     draw();
 
-    window.requestAnimationFrame(gameLoop);
+    if (!end) window.requestAnimationFrame(gameLoop);
 }
 
 function draw() {
