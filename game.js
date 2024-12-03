@@ -15,8 +15,8 @@ class Paddle {
         this.x = canvas.width / 2 - this.w / 2;
         this.y = canvas.height - this.h;
         this.vector = 0;
-        this.maxSpeed = 200;
-        this.acceleration = 5;
+        this.maxSpeed = 10000;
+        this.acceleration = 10;
     }
 
     draw() {
