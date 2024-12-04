@@ -1,4 +1,4 @@
-.tvorba-videa{
+.tvorba-videa {
     width: 200px;
     height: 50px;
     text-decoration: none;
@@ -10,6 +10,6 @@
 }
 
 
-.tvorba-videa:hover{
+.tvorba-videa:hover {
     background-color: rgb(148, 22, 22);
 }

@@ -63,11 +63,6 @@ main>h6 {
     margin-top: 1.4rem;
 }
 
-main li {
-    font-family: 'Roboto Mono', monospace;
-    font-size: 1.2rem;
-}
-
 ul ul {
     margin-left: 30px;
 }
@@ -75,11 +70,10 @@ ul ul {
 .button {
     height: 50px;
     text-decoration: none;
-    color: whitesmoke;
+    color: white;
     background-color: rgb(90, 90, 90);
     text-align: center;
     line-height: 45px;
-    border-radius: 10px;
     margin-top: 50px;
     font-size: 20px;
     padding: 3px 20px;
@@ -88,4 +82,22 @@ ul ul {
 
 .button:hover{
     background-color: rgb(122, 122, 122);
+}
+
+div.text-cont {
+    padding: 30px 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(44, 42, 42, 0.514);
+    border-radius: 20px;
+    font-family: "Roboto Mono", monospace;
+    font-size: 1.2rem;
+    max-width: 70%;
+    /* border: 3px rgb(72, 131, 72) solid; */
+}
+
+p {
+    text-align: center;
 }
